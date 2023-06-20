@@ -1,0 +1,120 @@
+@import '../../../styles/global.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+
+  .headerRow {
+    width: 100%;
+
+    .logo {
+      max-width: 150px;
+    }
+  }
+
+  .iconContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $color-black;
+
+      &:hover {
+        color:$button-main-hover;
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+
+      .logout {
+        &:hover {
+          cursor: pointer;
+          color: $button-main-hover;
+        }
+      }
+    }
+
+    .cart {
+      display: flex;
+
+      .counter {
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        width: 20px;
+        position: relative;
+        transform: translate(-25px, 60%);
+        border-radius: 50%;
+        background-color: $grey-mid;
+      }
+    }
+
+    svg {
+      height: 35px;
+      color: $color-main;
+      margin: 0 10px;
+    }
+  
+  }
+}
+
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 50px;
+  border: 3px solid $grey-light;
+  box-shadow: 1px 2px $grey-mid;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: width 2s;
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+
+  form {
+    width: 80%;
+    :focus-visible {
+      outline: none;
+    }
+    
+    input {
+      width: 100%;
+      border: none;
+      margin-left: 5px;
+    }
+  }
+
+  button {
+    border: none;
+    height: 100%;
+    width: 50px;
+    background: $color-white;
+
+    svg {
+      height: 20px;
+      color: $color-main;
+    }
+  }
+
+  button:hover {
+    background: $button-main-hover;
+
+    svg {
+      color: $color-white;
+    }
+  }
+}
+
+.formContainer:focus-within {
+  width: 100%;
+}

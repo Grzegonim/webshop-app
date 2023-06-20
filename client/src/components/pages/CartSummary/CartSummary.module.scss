@@ -1,0 +1,18 @@
+@import '../../../styles/global.scss';
+
+@media (max-width: 600px) {
+  .description {
+    display: none!important;
+  }
+}
+
+.subtotal {
+  font-size: 20px;
+  font-weight: 500;
+  
+  span {
+    margin: 0 5px;
+    font-weight: 700;
+    color: $price-color;
+  }
+}

@@ -1,0 +1,17 @@
+.formContainer {
+  .formGroup {
+    gap: 4px;
+    margin-bottom: 4px;
+  
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+  
+  }
+  
+  .adress {
+    gap: 4px;
+  }
+}

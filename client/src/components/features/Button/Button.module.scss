@@ -1,0 +1,31 @@
+@import '../../../styles//global.scss';
+
+button {
+  border: none;
+  background: $button-main;
+  color: white;
+  height: 40px;
+  border-radius: 10px!important;
+  padding: 0 10px;
+
+  &:hover {
+    background: $button-main-hover;
+  }
+
+  &.warning {
+    background-color: $button-warning;
+  
+    &:hover {
+      background-color: $button-warning-hover;
+    }
+  }
+  
+  &.success {
+    background-color: $button-success;
+  
+    &:hover {
+      background-color: $button-success-hover;
+    }
+  }
+}
+
