@@ -18,6 +18,6 @@ async function bootstrap() {
   const prismaService = app.get(PrismaService);
   await prismaService.enableShutdownHooks(app);
 
-  await app.listen(3306);
+  await app.listen(8001);
 }
 bootstrap();
