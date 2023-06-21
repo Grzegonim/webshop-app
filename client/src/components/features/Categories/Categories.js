@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import OfferMiniature from "../OfferMiniature/OfferMiniature";
 import { Row } from "react-bootstrap";
-import { fetchProductsByCategory } from "../../../redux/productsRecuer";
 import { useEffect } from "react";
+
+import OfferMiniature from "../OfferMiniature/OfferMiniature";
+import { fetchProductsByCategory } from "../../../redux/productsRecuer";
 
 const Categories = () => {
   const dispatch = useDispatch();
@@ -11,8 +12,7 @@ const Categories = () => {
   const products = useSelector(state => state.products);
   useEffect(() => {
     dispatch(fetchProductsByCategory(type));
-  }, [type])
-
+  }, [type]);
 
   return (
     <>

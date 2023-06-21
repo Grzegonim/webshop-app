@@ -1,5 +1,6 @@
-import styles from './Footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (

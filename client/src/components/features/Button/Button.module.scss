@@ -3,9 +3,9 @@
 button {
   border: none;
   background: $button-main;
+  border-radius: 10px!important;
   color: white;
   height: 40px;
-  border-radius: 10px!important;
   padding: 0 10px;
 
   &:hover {

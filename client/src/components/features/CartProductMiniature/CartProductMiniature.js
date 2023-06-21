@@ -1,8 +1,9 @@
 import { Row, Col } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import styles from './CartProductMiniature.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
+import styles from './CartProductMiniature.module.scss';
 import { removeFromLocalStorage, changeQuantityLocalStorage } from "../../../redux/cartReducer";
 import Button from '../Button/Button';
 

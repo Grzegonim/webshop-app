@@ -1,22 +1,21 @@
 @import '../../../styles/global.scss';
 
 .miniatureContainer {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
   max-height: 450px;
+  padding: 10px;
+  text-align: center;
   
   @media (max-width: 600px) {
     width: 100%!important;
   }
 
   img {
-    height: 300px;
     background: 70a1ff;
-    ;
+    height: 300px;
   }
 
   .title {
@@ -24,9 +23,9 @@
     font-weight: 500;
   }
   .price {
+    color: $price-color;
     font-size: 23px;
     font-weight: 700;
-    color: $price-color;
   }
 }
 

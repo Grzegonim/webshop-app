@@ -1,11 +1,12 @@
-import { Container, Row, Col, Form } from 'react-bootstrap';
-import styles from './Register.module.scss';
-import Button from '../../features/Button/Button';
+import { Row, Col, Form } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
-import { registerUser, user } from '../../../redux/userReducer';
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import { Modal } from 'react-bootstrap';
+
+import styles from './Register.module.scss';
+import Button from '../../features/Button/Button';
+import { registerUser, user } from '../../../redux/userReducer';
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -21,18 +22,18 @@ const Register = () => {
 
   useEffect(() => {
     setShow(!show)
-  }, [userData])
+  }, [userData]);
 
   function hasNumber(testingString) {
     return /\d/.test(testingString);
-  }
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
     if (password.length <= 5 | hasNumber(password) === false) {
       setPasswordTest(true);
       return alert('Wprowadź właściwe hasło');
-    }
+    };
     setPasswordTest(false);
     const userData = {
       name: name + ' ' + surname, 
@@ -40,9 +41,9 @@ const Register = () => {
       email,
       phone,
       password
-    }
+    };
     dispatch(registerUser(userData));
-  }
+  };
 
   return (
     <>

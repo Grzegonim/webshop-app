@@ -1,8 +1,8 @@
 @import '../../../styles/global.scss';
 
 .header {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
   margin: 20px 0;
 
@@ -15,12 +15,13 @@
   }
 
   .iconContainer {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
     a {
-      text-decoration: none;
       color: $color-black;
+      text-decoration: none;
 
       &:hover {
         color:$button-main-hover;
@@ -28,8 +29,8 @@
     }
 
     .user {
-      display: flex;
       align-items: center;
+      display: flex;
 
       .logout {
         &:hover {
@@ -43,22 +44,22 @@
       display: flex;
 
       .counter {
-        color: $color-white;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        height: 20px;
-        width: 20px;
-        position: relative;
-        transform: translate(-25px, 60%);
         border-radius: 50%;
         background-color: $grey-mid;
+        color: $color-white;
+        display: flex;
+        height: 20px;
+        justify-content: center;
+        position: relative;
+        transform: translate(-25px, 60%);
+        width: 20px;
       }
     }
 
     svg {
-      height: 35px;
       color: $color-main;
+      height: 35px;
       margin: 0 10px;
     }
   
@@ -66,16 +67,16 @@
 }
 
 .formContainer {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 60%;
-  height: 50px;
   border: 3px solid $grey-light;
   box-shadow: 1px 2px $grey-mid;
   border-radius: 10px;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
   overflow: hidden;
   transition: width 2s;
+  width: 60%;
 
   @media (max-width: 576px) {
     width: 100%;
@@ -88,21 +89,21 @@
     }
     
     input {
-      width: 100%;
       border: none;
       margin-left: 5px;
+      width: 100%;
     }
   }
 
   button {
     border: none;
+    background: $color-white;
     height: 100%;
     width: 50px;
-    background: $color-white;
 
     svg {
-      height: 20px;
       color: $color-main;
+      height: 20px;
     }
   }
 

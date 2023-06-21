@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Row, Col, Form, Modal } from "react-bootstrap";
-import styles from './Order.module.scss';
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import styles from './Order.module.scss';
 import { sendOrder } from "../../../redux/ordersReducer";
 import Button from "../../features/Button/Button";
-import { Link } from "react-router-dom";
 
 const Order = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const Order = () => {
   const request = useSelector((state) => state.request);
   const totalCartPrice = cart.reduce((total, item) => {
     return total += item.totalPrice;
-  }, 0)
+  }, 0);
   const [name, setName] = useState(user.name || '');
   const [address, setAddress] = useState(user.address || '');
   const [email, setEmail] = useState(user.email || '');
@@ -51,10 +52,10 @@ const Order = () => {
       delivery, 
       orderPrice,
       cart
-    }
-    dispatch(sendOrder(order))
+    };
+    dispatch(sendOrder(order));
     setShowOrderModal(true);
-  }
+  };
 
   return (
     <>

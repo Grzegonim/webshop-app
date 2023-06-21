@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { startRequest, endRequest } from './requestReducer.js';
+import { clearLocalStorage } from './cartReducer.js';
 import { API_URL } from '../config.js';
 
 //actions
@@ -13,6 +14,7 @@ export const sendOrder = (payload) => {
       dispatch(startRequest());
       await axios.post(`${API_URL}/orders`, payload);
       dispatch(addOrder(payload));
+      dispatch(clearLocalStorage());
       dispatch(endRequest());
     }
     catch (err) {

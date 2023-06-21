@@ -1,12 +1,13 @@
-import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
-import Cart from '../../features/Cart/Cart';
 import { useSelector, useDispatch } from 'react-redux';
-import { user, logoutUser } from '../../../redux/userReducer';
 import { useState } from 'react';
+
+import styles from './Header.module.scss';
+import Cart from '../../features/Cart/Cart';
+import { user, logoutUser } from '../../../redux/userReducer';
 import Button from '../../features/Button/Button';
 import { IMGS_URL } from '../../../config';
 
@@ -30,7 +31,7 @@ const Header = () => {
     <Container className={styles.header}>
       <Row className={styles.headerRow}>
 
-      <Col className='col-6 col-sm-4 order-1 order-sm-1' ><Link to='/'><img className={styles.logo} src={IMGS_URL + 'logo.svg'} /></Link></Col>
+      <Col className='col-6 col-sm-4 order-1 order-sm-1' ><Link to='/'><img className={styles.logo} src={IMGS_URL + 'logo.svg'} alt='logo' /></Link></Col>
 
       <Col className='col-12 col-sm-5 d-flex align-items-center order-3 order-sm-2'>
         <div className={styles.formContainer}>

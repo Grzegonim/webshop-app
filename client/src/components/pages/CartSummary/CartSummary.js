@@ -1,23 +1,24 @@
 import { useSelector } from "react-redux";
-import { Col, Container, Row } from "react-bootstrap";
-import CartProductMiniature from "../../features/CartProductMiniature/CartProductMiniature";
-import styles from './CartSummary.module.scss'
+import { Col, Row } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { clearCart, clearLocalStorage } from "../../../redux/cartReducer";
 import { Link } from "react-router-dom";
+
+import styles from './CartSummary.module.scss'
+import { clearLocalStorage } from "../../../redux/cartReducer";
 import Button from "../../features/Button/Button";
+import CartProductMiniature from "../../features/CartProductMiniature/CartProductMiniature";
 
 const CartSummary = () => {
   const dispatch = useDispatch();
   const summary = useSelector((state) => state.cart);
-  const localSummary = JSON.parse(localStorage.getItem("cart"));
 
   const totalCartPrice = summary.reduce((total, item) => {
     return total += item.totalPrice;
-  }, 0)
+  }, 0);
+  
   const handleClear = () => {
     dispatch(clearLocalStorage())
-  }
+  };
 
   return (
    <>

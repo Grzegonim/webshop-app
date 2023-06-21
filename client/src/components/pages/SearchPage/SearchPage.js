@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { searchProducts } from "../../../redux/productsRecuer";
 import { useEffect } from "react";
+import { Row } from "react-bootstrap";
+
+import { searchProducts } from "../../../redux/productsRecuer";
 import OfferMiniature from "../../features/OfferMiniature/OfferMiniature";
-import { Container, Row } from "react-bootstrap";
 
 const SearchPage = () => {
   const dispatch = useDispatch();

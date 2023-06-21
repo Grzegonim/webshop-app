@@ -1,9 +1,10 @@
-import { Container, Row, Col, Form, Modal } from "react-bootstrap";
+import { Row, Col, Form, Modal } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { useSelector, useDispatch } from "react-redux";
-import styles from './Review.module.scss';
 import { useState } from "react";
+
+import styles from './Review.module.scss';
 import Button from '../Button/Button';
 import { addReview } from "../../../redux/reviewReducer";
 

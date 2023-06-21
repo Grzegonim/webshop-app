@@ -1,12 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { fetchProductById } from "../../../redux/productsRecuer"; 
 import { Container, Row, Col, Spinner } from "react-bootstrap";
+import axios from "axios";
+
 import styles from './Offer.module.scss';
+import { fetchProductById } from "../../../redux/productsRecuer"; 
 import { addCartToLocalStorage } from "../../../redux/cartReducer";
 import { loadReviews } from "../../../redux/reviewReducer";
-import axios from "axios";
 import { API_URL, IMGS_URL } from "../../../config";
 import Review from "../../features/Review/Review";
 import Button from "../../features/Button/Button";
@@ -21,7 +22,7 @@ const Offer = () => {
 
   const handleCart = () => {
     dispatch(addCartToLocalStorage( { id: offer.id, price: offer.price, quantity, name: offer.name, totalPrice: quantity * offer.price }, summary ));
-  }
+  };
   
   useEffect(() => {
     dispatch(fetchProductById(id));

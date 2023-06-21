@@ -1,8 +1,9 @@
 import { Row, Col } from "react-bootstrap";
-import styles from './Products.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMugHot, faCubesStacked, faJarWheat, faLeaf } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
+
+import styles from './Products.module.scss';
 
 const Products = () => {
   const navigate = useNavigate();

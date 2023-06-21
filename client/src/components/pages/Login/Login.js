@@ -1,10 +1,11 @@
-import Button from '../../features/Button/Button';
-import styles from './Login.module.scss';
 import { Container, Form, Modal } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
-import { loginUser, user } from '../../../redux/userReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Link } from "react-router-dom";
+
+import styles from './Login.module.scss';
+import { loginUser, user } from '../../../redux/userReducer';
+import Button from '../../features/Button/Button';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const Login = () => {
     if (request === 'login-error') return setShow(true);
     if (request === 'start') return setShow(false);
     if (request === 'success' && userData.access_token !== null && userData.name !== null) return navigate('/');
-  }, [request])
+  }, [request]);
 
   const handleLogin = e => {
     e.preventDefault();

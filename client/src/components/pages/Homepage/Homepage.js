@@ -1,13 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { Spinner, Row, Carousel } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+import axios from "axios";
+
+import styles from './Homepage.module.scss';
 import { loadProducts, productsList } from "../../../redux/productsRecuer";
 import OfferMiniature from "../../features/OfferMiniature/OfferMiniature";
-import { Spinner, Row, Carousel } from "react-bootstrap";
 import { API_URL, IMGS_URL } from "../../../config";
-import axios from "axios";
-import styles from './Homepage.module.scss';
 import Products from "../../features/Products/Products";
-import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ const Homepage = () => {
           <img 
             src={IMGS_URL + 'carousel-1.jpg'}
             className={styles.carouselImg + " d-block w-100"}
+            alt=''
           />
         </Carousel.Item>
         <Carousel.Item>
@@ -51,6 +53,7 @@ const Homepage = () => {
             <img 
               src={IMGS_URL + 'carousel-2.jpg'}
               className={styles.carouselImg + " d-block w-100"}
+              alt='mleka'
             />
           </Link>
         </Carousel.Item>
@@ -59,6 +62,7 @@ const Homepage = () => {
             <img 
               src={IMGS_URL + 'carousel-3.jpg'}
               className={styles.carouselImg + " d-block w-100"}
+              alt='herbaty'
             />
           </Link>
         </Carousel.Item>
